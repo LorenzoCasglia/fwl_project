@@ -10,6 +10,7 @@ The notebook includes:
 - Simple data generation (simulated data)
 - Basic exploratory data analysis (EDA)
 - Linear regression using OLS
+- Simple Double machine learning
 - A practical illustration of the FWL theorem
 
 ## Purpose
