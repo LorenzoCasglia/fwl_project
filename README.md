@@ -1,73 +1,37 @@
-Using Frish-Waugh-Lovel theorem we can see that if $X$ and $W$ are independente, then asymptotically the coefficient $\beta_x^{short}$ estimated by regressing 
+# Econometric Analysis Project: FWL and linearity
 
-$$
-Y \sim X
-$$
+## Overview
+This repository contains a Jupyter notebook that explores basic econometric concepts using simulated data.
 
-is equal to $\beta_x^{long}$, the one we would obtain by estimating
+The project focuses on:
+- Illustration of the Frisch-Waugh-Lovell (FWL) theorem and its implications for linear regression both when the variables have a linear relation and when this does not happen.
 
-$$
-Y \sim X + W .
-$$
+## Objective
+The goal of this project is to demonstrate how classical econometric results arise in practice and to discuss their limitations when moving beyond linear settings.
 
-In fact, the coefficient $\beta_x^{long}$ that we get with $Y \sim X + W$ Is equal to the one we would get regressing
+## Methods
+The analysis includes:
+- Data generation (simulated dataset)
+- Exploratory data analysis (summary statistics and visual inspection)
+- Linear regression models
+- Application of the Frisch-Waugh-Lovell theorem
+- Discussion of conditions under which the equivalence between full and partial regressions holds
 
-$$
-M_W Y \sim M_W X
-$$
+## Key Insight
+The project shows that the equivalence between full and partial regression coefficients holds under linear conditional expectations, while deviations from linearity may require more flexible (nonparametric or machine learning-based) approaches.
 
-(by FWL). Se $X$ e $W$ are independent, then:
+## Requirements
+The following Python libraries are used:
+- numpy
+- pandas
+- matplotlib
+- seaborn
+- statsmodels
+- scikit-learn
+- doubleml
 
-$$
-\mathbb{E}[X W] = 0
-$$
+## Structure
+- `fwl_and_linearity.ipynb`: main analysis and implementation
 
-and asymptotically $\beta_x^{long}$ obtained by
-
-$$
-M_W Y \sim M_W X
-$$
-
-is equal to
-
-$$
-Y \sim X.
-$$
-
----
-
-Similar reasoning applies to independence conditional to $Z$, but **only if** $\mathbb{E}[Y \mid Z]$ and $\mathbb{E}[X \mid Z]$ are linear. Otherwise, the correct regression will be
-
-$$
-Y \sim X + Z + W
-$$
-
-equivalent to
-
-$$
-M_{WZ} Y \sim M_{WZ} X
-$$
-
-(by FWL) and it would **not be equal** to
-
-$$
-M_Z Y \sim M_Z X = Y \sim X + Z
-$$
-
-This is due to the fact that
-
-$$
-M_{WZ} Y \sim M_{WZ} X = M_Z Y \sim M_Z X
-$$
-
-only in the conditional means are linear.
-
----
-
-When conditional expectations given $Z$ are not linear, we can still apply a similar reasoning, but we must estimate 
-
-$$
-\mathbb{E}[Y \mid Z] \quad \text{e} \quad \mathbb{E}[X \mid Z]
-$$
-
- **non linearly** and compute the residuals with respect to those estimates.
+## Notes
+This is a learning-oriented project aimed at strengthening understanding of econometric theory
