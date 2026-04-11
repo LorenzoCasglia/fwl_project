@@ -1,73 +1,32 @@
-Using Frish-Waugh-Lovel theorem we can see that if $X$ and $W$ are independente, then asymptotically the coefficient $\beta_x^{short}$ estimated by regressing 
+# Econometrics Notes: FWL & OLS Intuition
 
-$$
-Y \sim X
-$$
+## Overview
+This repository contains a simple Jupyter notebook created for personal study purposes.
 
-is equal to $\beta_x^{long}$, the one we would obtain by estimating
+The goal is to better understand some basic econometric concepts, in particular the Frisch-Waugh-Lovell (FWL) theorem and its implication both when the variables are linked by a linear relation and when this does not happen.
 
-$$
-Y \sim X + W .
-$$
+## Content
+The notebook includes:
+- Simple data generation (simulated data)
+- Basic exploratory data analysis (EDA)
+- Linear regression using OLS
+- Simple Double machine learning
+- A practical illustration of the FWL theorem
 
-In fact, the coefficient $\beta_x^{long}$ that we get with $Y \sim X + W$ Is equal to the one we would get regressing
+## Purpose
+This project is purely educational and was developed as a way to build intuition around how linear regression works and how partialling-out results arise in practice.
 
-$$
-M_W Y \sim M_W X
-$$
+No formal or production-level analysis is intended.
 
-(by FWL). Se $X$ e $W$ are independent, then:
+## Requirements
+- numpy
+- pandas
+- matplotlib
+- seaborn
+- statsmodels
+- scikit-learn
+- doubleml
 
-$$
-\mathbb{E}[X W] = 0
-$$
+## File
+- `fwl_and_linearity.ipynb`: main working notebook
 
-and asymptotically $\beta_x^{long}$ obtained by
-
-$$
-M_W Y \sim M_W X
-$$
-
-is equal to
-
-$$
-Y \sim X.
-$$
-
----
-
-Similar reasoning applies to independence conditional to $Z$, but **only if** $\mathbb{E}[Y \mid Z]$ and $\mathbb{E}[X \mid Z]$ are linear. Otherwise, the correct regression will be
-
-$$
-Y \sim X + Z + W
-$$
-
-equivalent to
-
-$$
-M_{WZ} Y \sim M_{WZ} X
-$$
-
-(by FWL) and it would **not be equal** to
-
-$$
-M_Z Y \sim M_Z X = Y \sim X + Z
-$$
-
-This is due to the fact that
-
-$$
-M_{WZ} Y \sim M_{WZ} X = M_Z Y \sim M_Z X
-$$
-
-only in the conditional means are linear.
-
----
-
-When conditional expectations given $Z$ are not linear, we can still apply a similar reasoning, but we must estimate 
-
-$$
-\mathbb{E}[Y \mid Z] \quad \text{e} \quad \mathbb{E}[X \mid Z]
-$$
-
- **non linearly** and compute the residuals with respect to those estimates.
