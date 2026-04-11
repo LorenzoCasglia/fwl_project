@@ -1,27 +1,23 @@
-# Econometric Analysis Project: FWL and linearity
+# Econometrics Notes: FWL & OLS Intuition
 
 ## Overview
-This repository contains a Jupyter notebook that explores basic econometric concepts using simulated data.
+This repository contains a simple Jupyter notebook created for personal study purposes.
 
-The project focuses on:
-- Illustration of the Frisch-Waugh-Lovell (FWL) theorem and its implications for linear regression both when the variables have a linear relation and when this does not happen.
+The goal is to better understand some basic econometric concepts, in particular the Frisch-Waugh-Lovell (FWL) theorem and its implication both when the variables are linked by a linear relation and when this does not happen.
 
-## Objective
-The goal of this project is to demonstrate how classical econometric results arise in practice and to discuss their limitations when moving beyond linear settings.
+## Content
+The notebook includes:
+- Simple data generation (simulated data)
+- Basic exploratory data analysis (EDA)
+- Linear regression using OLS
+- A practical illustration of the FWL theorem
 
-## Methods
-The analysis includes:
-- Data generation (simulated dataset)
-- Exploratory data analysis (summary statistics and visual inspection)
-- Linear regression models
-- Application of the Frisch-Waugh-Lovell theorem
-- Discussion of conditions under which the equivalence between full and partial regressions holds
+## Purpose
+This project is purely educational and was developed as a way to build intuition around how linear regression works and how partialling-out results arise in practice.
 
-## Key Insight
-The project shows that the equivalence between full and partial regression coefficients holds under linear conditional expectations, while deviations from linearity may require more flexible (nonparametric or machine learning-based) approaches.
+No formal or production-level analysis is intended.
 
 ## Requirements
-The following Python libraries are used:
 - numpy
 - pandas
 - matplotlib
@@ -30,8 +26,5 @@ The following Python libraries are used:
 - scikit-learn
 - doubleml
 
-## Structure
-- `fwl_and_linearity.ipynb`: main analysis and implementation
-
-## Notes
-This is a learning-oriented project aimed at strengthening understanding of econometric theory
+## File
+- `fwl_and_linearity.ipynb`: main working notebook
